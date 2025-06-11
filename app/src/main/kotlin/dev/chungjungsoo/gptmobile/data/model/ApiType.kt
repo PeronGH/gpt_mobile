@@ -4,6 +4,7 @@ enum class ApiType {
     OPENAI,
     ANTHROPIC,
     GOOGLE,
+    GEMINI, // Added GEMINI
     GROQ,
     OLLAMA
 }

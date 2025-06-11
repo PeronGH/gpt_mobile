@@ -13,6 +13,7 @@ import com.google.ai.client.generativeai.type.BlockThreshold
 import com.google.ai.client.generativeai.type.Content
 import com.google.ai.client.generativeai.type.GenerateContentResponse
 import com.google.ai.client.generativeai.type.HarmCategory
+import com.google.ai.client.generativeai.type.RequestOptions
 import com.google.ai.client.generativeai.type.SafetySetting
 import com.google.ai.client.generativeai.type.content
 import com.google.ai.client.generativeai.type.generationConfig
@@ -108,6 +109,11 @@ class ChatRepositoryImpl @Inject constructor(
             temperature = platform.temperature
             topP = platform.topP
         }
+        // Create RequestOptions with the custom endpoint
+        val requestOptions = com.google.ai.client.generativeai.type.RequestOptions(
+            endpoint = platform.apiUrl.ifBlank { null } // Use null if blank to let SDK use default
+        )
+
         google = GenerativeModel(
             modelName = platform.model ?: "",
             apiKey = platform.token ?: "",
@@ -116,7 +122,8 @@ class ChatRepositoryImpl @Inject constructor(
             safetySettings = listOf(
                 SafetySetting(HarmCategory.DANGEROUS_CONTENT, BlockThreshold.ONLY_HIGH),
                 SafetySetting(HarmCategory.SEXUALLY_EXPLICIT, BlockThreshold.NONE)
-            )
+            ),
+            requestOptions = requestOptions // Pass the requestOptions here
         )
 
         val inputContent = messageToGoogleMessage(history)

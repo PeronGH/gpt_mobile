@@ -19,7 +19,6 @@ class SettingRepositoryImpl @Inject constructor(
             ApiType.OPENAI -> settingDataSource.getAPIUrl(apiType) ?: ModelConstants.OPENAI_API_URL
             ApiType.ANTHROPIC -> settingDataSource.getAPIUrl(apiType) ?: ModelConstants.ANTHROPIC_API_URL
             ApiType.GOOGLE -> settingDataSource.getAPIUrl(apiType) ?: ModelConstants.GOOGLE_API_URL
-            ApiType.GEMINI -> settingDataSource.getAPIUrl(apiType) ?: ModelConstants.GEMINI_API_URL
             ApiType.GROQ -> settingDataSource.getAPIUrl(apiType) ?: ModelConstants.GROQ_API_URL
             ApiType.OLLAMA -> settingDataSource.getAPIUrl(apiType) ?: ""
         }
@@ -31,7 +30,6 @@ class SettingRepositoryImpl @Inject constructor(
             ApiType.OPENAI -> settingDataSource.getSystemPrompt(apiType) ?: ModelConstants.OPENAI_PROMPT
             ApiType.ANTHROPIC -> settingDataSource.getSystemPrompt(apiType) ?: ModelConstants.DEFAULT_PROMPT
             ApiType.GOOGLE -> settingDataSource.getSystemPrompt(apiType) ?: ModelConstants.DEFAULT_PROMPT
-            ApiType.GEMINI -> settingDataSource.getSystemPrompt(apiType) ?: ModelConstants.DEFAULT_PROMPT
             ApiType.GROQ -> settingDataSource.getSystemPrompt(apiType) ?: ModelConstants.DEFAULT_PROMPT
             ApiType.OLLAMA -> settingDataSource.getSystemPrompt(apiType) ?: ModelConstants.DEFAULT_PROMPT
         }

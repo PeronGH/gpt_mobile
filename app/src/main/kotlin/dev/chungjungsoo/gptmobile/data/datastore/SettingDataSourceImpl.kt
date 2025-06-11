@@ -21,7 +21,6 @@ class SettingDataSourceImpl @Inject constructor(
         ApiType.OPENAI to booleanPreferencesKey("openai_status"),
         ApiType.ANTHROPIC to booleanPreferencesKey("anthropic_status"),
         ApiType.GOOGLE to booleanPreferencesKey("google_status"),
-        ApiType.GEMINI to booleanPreferencesKey("gemini_status"),
         ApiType.GROQ to booleanPreferencesKey("groq_status"),
         ApiType.OLLAMA to booleanPreferencesKey("ollama_status")
     )
@@ -29,7 +28,6 @@ class SettingDataSourceImpl @Inject constructor(
         ApiType.OPENAI to stringPreferencesKey("openai_url"),
         ApiType.ANTHROPIC to stringPreferencesKey("anthropic_url"),
         ApiType.GOOGLE to stringPreferencesKey("google_url"),
-        ApiType.GEMINI to stringPreferencesKey("gemini_url"),
         ApiType.GROQ to stringPreferencesKey("groq_url"),
         ApiType.OLLAMA to stringPreferencesKey("ollama_url")
     )
@@ -37,7 +35,6 @@ class SettingDataSourceImpl @Inject constructor(
         ApiType.OPENAI to stringPreferencesKey("openai_token"),
         ApiType.ANTHROPIC to stringPreferencesKey("anthropic_token"),
         ApiType.GOOGLE to stringPreferencesKey("google_token"),
-        ApiType.GEMINI to stringPreferencesKey("gemini_token"),
         ApiType.GROQ to stringPreferencesKey("groq_token"),
         ApiType.OLLAMA to stringPreferencesKey("ollama_token")
     )
@@ -45,7 +42,6 @@ class SettingDataSourceImpl @Inject constructor(
         ApiType.OPENAI to stringPreferencesKey("openai_model"),
         ApiType.ANTHROPIC to stringPreferencesKey("anthropic_model"),
         ApiType.GOOGLE to stringPreferencesKey("google_model"),
-        ApiType.GEMINI to stringPreferencesKey("gemini_model"),
         ApiType.GROQ to stringPreferencesKey("groq_model"),
         ApiType.OLLAMA to stringPreferencesKey("ollama_model")
     )
@@ -53,7 +49,6 @@ class SettingDataSourceImpl @Inject constructor(
         ApiType.OPENAI to floatPreferencesKey("openai_temperature"),
         ApiType.ANTHROPIC to floatPreferencesKey("anthropic_temperature"),
         ApiType.GOOGLE to floatPreferencesKey("google_temperature"),
-        ApiType.GEMINI to floatPreferencesKey("gemini_temperature"),
         ApiType.GROQ to floatPreferencesKey("groq_temperature"),
         ApiType.OLLAMA to floatPreferencesKey("ollama_temperature")
     )
@@ -61,7 +56,6 @@ class SettingDataSourceImpl @Inject constructor(
         ApiType.OPENAI to floatPreferencesKey("openai_top_p"),
         ApiType.ANTHROPIC to floatPreferencesKey("anthropic_top_p"),
         ApiType.GOOGLE to floatPreferencesKey("google_top_p"),
-        ApiType.GEMINI to floatPreferencesKey("gemini_top_p"),
         ApiType.GROQ to floatPreferencesKey("groq_top_p"),
         ApiType.OLLAMA to floatPreferencesKey("ollama_top_p")
     )
@@ -69,7 +63,6 @@ class SettingDataSourceImpl @Inject constructor(
         ApiType.OPENAI to stringPreferencesKey("openai_system_prompt"),
         ApiType.ANTHROPIC to stringPreferencesKey("anthropic_system_prompt"),
         ApiType.GOOGLE to stringPreferencesKey("google_system_prompt"),
-        ApiType.GEMINI to stringPreferencesKey("gemini_system_prompt"),
         ApiType.GROQ to stringPreferencesKey("groq_system_prompt"),
         ApiType.OLLAMA to stringPreferencesKey("ollama_system_prompt")
     )

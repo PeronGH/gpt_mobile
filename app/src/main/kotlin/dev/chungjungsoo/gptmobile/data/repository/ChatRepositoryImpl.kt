@@ -118,8 +118,10 @@ class ChatRepositoryImpl @Inject constructor(
             systemInstruction = platform.systemPrompt.takeIf { !it.isNullOrEmpty() }?.let { content { text(it) } },
             generationConfig = config,
             safetySettings = listOf(
-                SafetySetting(HarmCategory.DANGEROUS_CONTENT, BlockThreshold.ONLY_HIGH),
-                SafetySetting(HarmCategory.SEXUALLY_EXPLICIT, BlockThreshold.NONE)
+                SafetySetting(HarmCategory.DANGEROUS_CONTENT, BlockThreshold.NONE),
+                SafetySetting(HarmCategory.SEXUALLY_EXPLICIT, BlockThreshold.NONE),
+                SafetySetting(HarmCategory.HARASSMENT, BlockThreshold.NONE),
+                SafetySetting(HarmCategory.HATE_SPEECH, BlockThreshold.NONE),
             )
         )
 
